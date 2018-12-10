@@ -9,7 +9,7 @@ RUN useradd -u 1001 $user -g $group -m \
     && chown -R $user:$group $INSTALL_DIR \
     && chown -R $user:$group /var /opt /tmp
 
-COPY .open_ocp-ha-lab.repo /etc/yum.repos.d/
+COPY open_ocp-ha-lab.repo /etc/yum.repos.d/
 
 RUN echo $user $group && yum install -y unzip
 
