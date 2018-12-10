@@ -46,10 +46,10 @@ ENV LOG_DIR=/logs \
 
     WLP_OUTPUT_DIR=$LIBERTY_DIR/output
 
-RUN mkdir /logs \
-
-    && ln -s $WLP_OUTPUT_DIR/defaultServer /output \
-    && ln -s $LIBERTY_DIR/usr/servers/defaultServer /config
+#RUN mkdir /logs \
+#
+#    && ln -s $WLP_OUTPUT_DIR/defaultServer /output \
+#    && ln -s $LIBERTY_DIR/usr/servers/defaultServer /config
 
 # Configure WebSphere Liberty
 
