@@ -58,7 +58,7 @@ RUN $LIBERTY_DIR/bin/server create \
     && mkdir -p $WLP_OUTPUT_DIR/defaultServer/logs/ \
     && touch $WLP_OUTPUT_DIR/defaultServer/logs/messages.log \
     && mkdir -p $LIBERTY_DIR/usr/servers/defaultServer/.logs/ \
-    && chmod g+rwx $LIBERTY_DIR/usr/servers $LIBERTY_DIR/usr/servers/defaultServer $LIBERTY_DIR/usr/servers/defaultServer/dropins $LIBERTY_DIR/usr/servers/defaultServer/apps $WLP_OUTPUT_DIR/defaultServer/workarea $WLP_OUTPUT_DIR/.classCache/ $LIBERTY_DIR/usr/servers/defaultServer/.logs $WLP_OUTPUT_DIR/defaultServer/logs/ \
+    && chmod g+rwx $LIBERTY_DIR/usr/servers $LIBERTY_DIR/usr/servers/defaultServer $LIBERTY_DIR/usr/servers/defaultServer/dropins $LIBERTY_DIR/usr/servers/defaultServer/apps $WLP_OUTPUT_DIR/defaultServer/workarea $LIBERTY_DIR/usr/servers/defaultServer/.logs $WLP_OUTPUT_DIR/defaultServer/logs/ \
     && chmod g+rw $LIBERTY_DIR/usr/servers/defaultServer/server.xml $LIBERTY_DIR/usr/servers/defaultServer/server.env $WLP_OUTPUT_DIR/defaultServer/logs/messages.log
 #    && chmod g+rw $LIBERTY_DIR/usr/servers/defaultServer/server.xml $LIBERTY_DIR/usr/servers/defaultServer/server.env  $LIBERTY_DIR/usr/servers/defaultServer/workarea/.sLock $WLP_OUTPUT_DIR/defaultServer/logs/messages.log
 
