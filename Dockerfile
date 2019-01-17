@@ -53,6 +53,8 @@ ENV LOG_DIR=/logs \
 
 # Configure WebSphere Liberty
 
+COPY JavaHelloWorldApp.war $LIBERTY_DIR/usr/servers/defaultServer/apps/
+
 RUN $LIBERTY_DIR/bin/server create \
     && rm -rf $WLP_OUTPUT_DIR/.classCache/* /$WLP_OUTPUT_DIR/defaultServer/workarea/* \
     && mkdir -p $WLP_OUTPUT_DIR/defaultServer/logs/ \
@@ -64,8 +66,6 @@ RUN $LIBERTY_DIR/bin/server create \
 
 #RUN curl --insecure -s -f -X GET "$WEBSPHERE_URL/repositories.properties" -o $LIBERTY_DIR/etc/repositories.properties
 COPY repositories.properties $LIBERTY_DIR/etc/repositories.properties
-
-COPY JavaHelloWorldApp.war $LIBERTY_DIR/usr/servers/defaultServer/apps/
 
 RUN curl --insecure -s -f -X GET "https://ak-delivery04-mul.dhe.ibm.com/sar/CMA/WSA/07684/1/wlp-featureRepo-17.0.0.3.zip" -o $LIBERTY_DIR/usr/wlp-featureRepo-17.0.0.3.zip
 
