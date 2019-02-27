@@ -1,6 +1,6 @@
 FROM registry.access.redhat.com/rhel7
 
-ENV WLP_OUTPUT_DIR="/opt/IBM/WebSphere/Liberty/usr/servers/" im_installer="agent.installer.linux.gtk.x86_64-1.8.3.zip" java_installer="ibm-java-jre-8.0-5.25-x86_64-archive.bin" was_file="wlp-kernel-17.0.0.3.zip" LIBERTY_DIR="/opt/IBM/WebSphere/Liberty" JAVA_URL="http://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/java/8.0.5.25/linux/x86_64/" WEBSPHERE_URL="https://ak-delivery04-mul.dhe.ibm.com/sar/CMA/WSA/07683/1/" INSTALL_DIR="/opt/IBM/" user="wasadmin" group="root"
+ENV WLP_OUTPUT_DIR="/opt/IBM/WebSphere/Liberty/usr/servers/" im_installer="agent.installer.linux.gtk.x86_64-1.8.3.zip" java_installer="ibm-java-jre-8.0-5.25-x86_64-archive.bin" was_file="wlp-kernel-18.0.0.4.zip" LIBERTY_DIR="/opt/IBM/WebSphere/Liberty" JAVA_URL="http://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/java/8.0.5.25/linux/x86_64/" WEBSPHERE_URL="https://ak-delivery04-mul.dhe.ibm.com/sar/CMA/WSA/07zlk/0/" INSTALL_DIR="/opt/IBM/" user="wasadmin" group="root"
 
 RUN useradd -u 1001 $user -g $group -m \
     #usermod -u 1001 $user \
